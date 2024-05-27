@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1alpha1
+kind: Component
+
+helmCharts:
+- name: csi-secrets-store-provider-azure
+  releaseName: csi-secrets-store-provider-azure-aks
+  repo: https://azure.github.io/secrets-store-csi-driver-provider-azure/charts
+  version: "1.5.4"
+  namespace: kube-system
+  valuesFile: csi-secrets-store-provider-azure-values.yaml
+
+
+

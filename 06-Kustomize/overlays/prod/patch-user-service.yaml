@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user
+spec:
+  replicas: 4  # Desired number of replicas
+  template:
+    spec:
+      containers:
+      - name: user-service    # This should match the container name in the Deployment
+        image: azureacrae.azurecr.io/robot-shop-user:v0.3.0  # New image to deploy
